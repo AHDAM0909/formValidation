@@ -157,7 +157,6 @@ const Signup = () => {
   if (submitted) {
     return (
       <div className="w-full max-w-md mx-auto mt-10 border-2 border-green-500 rounded-lg p-8 text-center bg-green-50">
-        <p className="text-5xl mb-4">✓</p>
         <h2 className="text-2xl font-bold mb-2 text-green-700">Success!</h2>
         <p className="text-green-700 mb-6">Welcome, {formsData.fullName}! Your account has been created.</p>
         
@@ -202,7 +201,7 @@ const Signup = () => {
           onChange={changeData}
         />
         {error.fullName && <p className="text-red-500 text-sm font-medium">{error.fullName}</p>}
-        {formsData.fullName && !error.fullName && <p className="text-green-600 text-sm font-medium">✓ Looks good!</p>}
+        {formsData.fullName && !error.fullName && <p className="text-green-600 text-sm font-medium"> Looks good!</p>}
       </div>
 
       {/* Email Field */}
@@ -300,14 +299,14 @@ const Signup = () => {
         className={`w-full font-bold py-2 px-4 rounded-md transition ${
           isFormValid()
             ? 'bg-orange-300 hover:bg-orange-400 text-white cursor-pointer'
-            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            : 'bg-green-300 text-green-500 cursor-not-allowed'
         }`}
       >
         {isFormValid() ? 'Create Account' : 'Fill all fields correctly'}
       </button>
 
       <p className="text-center text-sm text-gray-600 mt-4">
-        Already have an account? <a href="#" className="text-orange-300 hover:text-orange-400">Login</a>
+        Already have an account? <a href="#" className="text-green-300 hover:text-green-400">Login</a>
       </p>
     </form>
   )
